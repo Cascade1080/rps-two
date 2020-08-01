@@ -46,6 +46,8 @@ function playRound(playerSelection, computerSelection){
     console.log(finalAnswer)
     console.log(score)
     return score
+
+    
 }
 
 function game(){
@@ -53,7 +55,7 @@ function game(){
     playerScore = 0
     computerScore = 0
 
-    for( i = 0; i < 5; i++){
+   /* for( i = 0; i < 5; i++){
         round++
         console.log("Round: " + round)
         playRound()
@@ -69,5 +71,11 @@ function game(){
         }
 
         
-    }
+    }*/
+
+   
 }
+
+const rock = document.querySelector('#rock');
+rock.addEventListener('click', playRound());
+    
