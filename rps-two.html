@@ -6,24 +6,79 @@
     }
     h1 {
         color: blue;
+        position: relative;
+        top: 30px;
+        width: 100%
+        display: auto;
+        text-align: center;
     }
     h2{
-        color:#6495ed
+        color: rgb(0, 204, 255);
+        position: relative;
+        top: 30px;
+        width: 100%
+        display: auto;
+        text-align: center;
+    }
+    .display{
+        background-color: white;
+        color: black;
+        font-size:x-large;
+        border: 10px solid blue;
+        width: 500px;
+        height: auto;
+        position: relative;
+        display: auto;
+        margin: auto;
+        text-align: center;
+    }
+
+    .playerReadout{
+        background-color: white;
+        color: black;
+        font-size:x-large;
+        border: 10px solid blue;
+        width: 500px;
+        height: 30px;
+        margin: auto;
+        text-align: center;
+    }
+    .buttons{
+        
+    position:relative;
+    margin: 0 auto;
+    text-align: center;
+        
     }
     
 </style>
     
 
 <body>
-    <h1> Rock Paper Scissors </h1>
-    <h2> ...the game </h2>
+    <h1> Rock-Paper-Scissors </h1>
+    <h2> ...the game </h2><br>
+    
+    <div class = "buttons">
+        <button id="play">Play</button>
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
 
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
+    <div class ="display">
+        <div id="readout">
+            Welcome to ThunderDome!
+        </div>
+        <div id="player"></div>
+        <div id="computer"></div>
+        
+    </div>
 
-    <div>
-
+    <div class="playerReadout">
+        <div id="verdict"></div>
+    </div>
+        
+        
         
 
     </div>

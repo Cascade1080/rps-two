@@ -1,3 +1,4 @@
+
 function computerPlay(){
     num = Math.random() * 2
     fixednum = Math.round(num)
@@ -14,11 +15,14 @@ function computerPlay(){
 
 
 function playRound(playerSelection, computerSelection){
-    playerSelection = window.prompt("Rock, Paper, Scissors...Shoot!")
-    playerSelection = playerSelection.toLowerCase()
-    console.log("The player has selected " + playerSelection)
-    computerSelection = computerPlay()
-    console.log("The computer has selected " + computerSelection)
+    //playerSelection = window.prompt("Rock, Paper, Scissors...Shoot!")
+    //playerSelection = playerSelection.toLowerCase()
+    player.textContent = ("The player has selected " + playerSelection);
+   
+    computerSelection = computerPlay();
+
+    computer.textContent = ("The computer has selected " + computerSelection);
+   
 
     if(playerSelection === "rock" && computerSelection === "paper"){
         finalAnswer = "You Lose!  Paper covers rock"
@@ -43,11 +47,10 @@ function playRound(playerSelection, computerSelection){
         score = 2
     }
 
-    console.log(finalAnswer)
-    console.log(score)
+    verdict.textContent = finalAnswer;
+    //console.log(score)
     return score
-
-    
+   
 }
 
 function game(){
@@ -76,6 +79,26 @@ function game(){
    
 }
 
-const rock = document.querySelector('#rock');
-rock.addEventListener('click', playRound());
-    
+play.addEventListener('click', () =>{
+    readout.textContent = "Rock, Paper, Scissors ... Shoot!";
+});
+
+rock.addEventListener('click', () => {
+    playRound("rock");
+    readout.textContent = " ";
+})
+
+
+paper.addEventListener('click', () =>{
+    playRound("paper");
+    readout.textContent = " ";
+})
+
+
+scissors.addEventListener('click', () =>{
+    playRound("scissors");
+    readout.textContent = " ";
+})
+
+
+
